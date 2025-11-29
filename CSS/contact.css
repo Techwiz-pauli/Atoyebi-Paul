@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root{
+    --primary-color: black
+    --secondary-color: #F8F9FA;
+    --font-size:16px;
+    --font-family:"DM Sans", sans-serif;
+    --tertiary-color: #E6E6E9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    background:#F5F5F5;
+    color: var(--primary-color);
+    overflow-x: hidden;
+    line-height: 1.6;
+    transition: background-color 1s, color 0.3s;
+}
+
+.contact_page{
+    background-color: white;
+    padding: 150px 200px 200px 200px;
+}
+.contact_heading{
+    font-size: 33px;
+    padding: 70px 0 50px 0;
+}
+.contact_subheading{
+    line-height: 40px;
+    font-size: 1rem;
+    padding-bottom: 40px;
+    width: 60%;
+}
+form{
+    line-height: 10px;
+    /* position: relative; */
+    outline: none;
+    
+}
+
+.contact_form input{
+    width: 750px;
+    padding: 1.3rem 0rem;
+    margin: 0px 0 10px 0;
+    border-radius: none;
+    background-color:none;
+    font-size: 1rem;
+    color: black;
+}
+input{
+    width: 100%;
+    font-size: 1rem;
+    color: black;
+    border-radius: none;
+    background-color: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #E1E1E1;
+    padding: 1rem 0rem;
+    font-family: var(--font-family);
+}
+
+
+.contact_form input:focus{
+    outline: none;
+    border-bottom: 1px solid black;
+    background-color: white;
+    border-radius: none;
+    transition: 0.3s;
+} 
+
+input::placeholder{
+    color: #86838A;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: var(--font-family);
+}
+textarea{
+    border: none;
+    border-bottom: 2px solid #E1E1E1;
+    padding-top: 30px;
+    overflow-x: hidden;
+    resize: none;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    width: 750px;
+}
+textarea:focus{
+    outline: none;
+    border-bottom: 1px solid black;
+    background-color: white;
+    border-radius: none;
+}
+textarea::placeholder{
+    color: #86838A;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: var(--font-family);
+}
+button {
+    background-color: black;
+    color: rgb(82, 33, 33);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+    font-family: var(--font-family);
+    border-radius: 0; /* Square button */
+    border: none;
+    margin-left: 590px;
+    outline: none;
+    padding: 20px; /* Equal padding to make it square */
+}
+
+button a {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 35px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-radius: 0; /* No border-radius for the link inside */
+    border: none;
+    color: white;
+}
+button #but a:hover{
+    color: white;
+    text-decoration: none;
+}
+#but:hover{
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+    border: 1px solid black;
+}
+#but{
+    border-radius: 0;
+}
+button i{
+    rotate: 45deg;
+    
+}
+button:hover a {
+    color: black; 
+}
+
+@media (max-width:500px){
+    .contact_page{
+        background-color: white;
+        padding: 100px 30px 100px 30px;
+    }
+    .contact_heading{
+        font-size: 2rem;
+        padding: 70px 0 20px 0;
+    }
+    .contact_subheading{
+        line-height: 30px;
+        font-size: 0.8rem;
+        padding-bottom: 40px;
+    }
+    
+    .contact_heading h1{
+        font-size: 2rem;
+    
+    }
+
+    .contact_form input{
+        width: 300px;
+        padding: 1.3rem 0rem;
+        margin: 0px 0 10px 0;
+        border-radius: none;
+        background-color:none;
+        font-size: 1rem;
+        color: black;
+    }
+    input{
+        width: 100%;
+        font-size: 1rem;
+        color: black;
+        border-radius: none;
+        background-color: none;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid #E1E1E1;
+        padding: 1rem 0rem;
+        font-family: var(--font-family);
+    }
+    textarea{
+        border: none;
+        border-bottom: 2px solid #E1E1E1;
+        padding-top: 30px;
+        overflow-x: hidden;
+        resize: none;
+        width: 300px;
+        font-size: 1rem;
+        font-family: var(--font-family);
+        
+    }
+    textarea:focus{
+        outline: none;
+        border-bottom: 1px solid black;
+        background-color: white;
+        border-radius: none;
+    }
+    textarea::placeholder{
+        color: #86838A;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: var(--font-family);
+    }
+    button {
+        background-color: black;
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: 0.3s;
+        font-family: var(--font-family);
+        border-radius: 0; /* Square button */
+        border: none;
+        margin-left: 120px;
+        outline: none;
+        padding: 20px; /* Equal padding to make it square */
+    }
+}

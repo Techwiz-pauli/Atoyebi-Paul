@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root{
+    --primary-color: black
+    --secondary-color: #F8F9FA;
+    --font-size:16px;
+    --font-family:"DM Sans", sans-serif;
+    --tertiary-color: #E6E6E9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    background:#F5F5F5;
+    color: var(--primary-color);
+    overflow-x: hidden;
+    line-height: 1.6;
+    transition: background-color 1s, color 0.3s;
+}
+
+
+/* end of nav */
+.work-main-page{
+    min-height: 100vh;
+    background-color: white;
+    font-size: 45px;
+}
+.work-background{
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.work-page h2{
+    font-size: 4rem;
+    margin-top: -400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.work-arrow{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 40%;
+    left: 40%;
+    justify-content: center;
+    animation: animation 2s infinite;
+}
+@keyframes animation{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+}
+
+.works-github-projects{
+    padding: 150px 200px 200px 200px;
+    background-color: #fff;
+}
+.work-container{
+    display: flex;
+    align-items: center;
+}
+
+.work-project-src ul{
+    text-align: left;
+    padding: 50px 0 50px 0;
+}
+.work-project-src ul li{
+    list-style-type: none;
+    color: #727272;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    padding: 20px 0 20px 0;
+}
+.work-project-src ul li a{
+    color: black;
+    text-decoration: underline;
+    font-size: 25px;
+    font-weight: 500;
+    
+}
+.github-head{
+    font-size: 35px;
+    color: black;
+    
+}
+.github-subhead a {
+    color: black;
+    font-weight: 600;
+   
+    
+}
+.github-subhead{
+    padding: 20px 20px 20px 0;
+    line-height: 35px;
+    font-size: 18px;
+    color: #727272;
+    width: 80%;
+}
+
+@media (max-width:500px){
+    .works-github-projects{
+        padding: 30px 30px 30px 30px;
+        background-color: #fff;
+        width: 100%;
+    }
+    .github-subhead{
+        width: 100%;
+        font-size: 1rem;
+        text-align: justify;
+    }
+    .github-head{
+        font-size: 1.5rem;
+    }
+    .work-project-src ul li a{
+        font-size:0.8rem;
+    }
+}

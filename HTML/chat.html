@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Chatbot</title>
+  <style>
+    #chatbot-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: linear-gradient(90deg, #627BFF 0%, #D46CFF 100%);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 28px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    #chatbot {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 350px;
+      max-height: 500px;
+      display: none;
+      flex-direction: column;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    #chat-header {
+      background: linear-gradient(90deg, #627BFF 0%, #D46CFF 100%);
+      color: white;
+      padding: 12px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    #chat-messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+
+    .msg {
+      margin: 8px 0;
+      padding: 8px 12px;
+      border-radius: 10px;
+      max-width: 80%;
+      word-wrap: break-word;
+    }
+
+    .user {
+      background: #627BFF;
+      color: white;
+      margin-left: auto;
+    }
+
+    .bot {
+      background: #f0f0f0;
+      color: #333;
+      margin-right: auto;
+    }
+
+    #chat-input {
+      display: flex;
+      border-top: 1px solid #ddd;
+    }
+
+    #chat-input input {
+      flex: 1;
+      border: none;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    #chat-input button {
+      background: linear-gradient(90deg, #627BFF 0%, #D46CFF 100%);
+      border: none;
+      color: white;
+      padding: 10px 16px;
+      cursor: pointer;
+    }
+
+    /* Suggestion buttons */
+    #suggestions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 8px;
+      border-top: 1px solid #ddd;
+      background: #fafafa;
+    }
+
+    .suggestion-btn {
+      flex: 1;
+      padding: 6px 10px;
+      font-size: 12px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #627BFF 0%, #D46CFF 100%);
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .suggestion-btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <button id="chatbot-btn">💬</button>
+
+  <div id="chatbot">
+    <div id="chat-header">Ask me about my portfolio</div>
+    <div id="chat-messages"></div>
+
+    <!-- Suggestion buttons -->
+    <div id="suggestions">
+      <button class="suggestion-btn">Show me your projects</button>
+      <button class="suggestion-btn">What skills do you have?</button>
+      <button class="suggestion-btn">Tell me about you</button>
+      <button class="suggestion-btn">How can I contact you?</button>
+      <button class="suggestion-btn">Have you release your story book?</button>
+      <button class="suggestion-btn">Can i access your storybook web in Portfolio website?</button>
+    </div>
+
+    <div id="chat-input">
+      <input type="text" id="user-input" placeholder="Type your question..." />
+      <button id="send-btn">➤</button>
+    </div>
+  </div>
+
+  <script>
+    const chatbotBtn = document.getElementById("chatbot-btn");
+    const chatbot = document.getElementById("chatbot");
+    const chatMessages = document.getElementById("chat-messages");
+    const userInput = document.getElementById("user-input");
+    const sendBtn = document.getElementById("send-btn");
+    const suggestionBtns = document.querySelectorAll(".suggestion-btn");
+
+    chatbotBtn.addEventListener("click", () => {
+      chatbot.style.display = chatbot.style.display === "flex" ? "none" : "flex";
+    });
+
+    function addMessage(sender, text) {
+      const msg = document.createElement("div");
+      msg.classList.add("msg", sender);
+      msg.textContent = text;
+      chatMessages.appendChild(msg);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    async function callBackend(prompt) {
+      try {
+        const response = await fetch("http://localhost:3000/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ prompt })
+        });
+
+        const data = await response.json();
+        return data.content || "No response from AI.";
+      } catch (error) {
+        console.error(error);
+        return "Error connecting to backend.";
+      }
+    }
+
+    async function handleUserMessage(text) {
+      addMessage("user", text);
+      userInput.value = "";
+
+      const reply = await callBackend(text);
+      addMessage("bot", reply);
+    }
+
+    sendBtn.addEventListener("click", () => {
+      const text = userInput.value.trim();
+      if (text) handleUserMessage(text);
+    });
+
+    userInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        const text = userInput.value.trim();
+        if (text) handleUserMessage(text);
+      }
+    });
+
+    // Suggestion buttons click
+    suggestionBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        handleUserMessage(btn.textContent);
+      });
+    });
+  </script>
+</body>
+</html>

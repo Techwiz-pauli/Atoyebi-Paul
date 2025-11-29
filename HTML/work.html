@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- SEO AND RESPONSIVENESS -->
+    <link rel="stylesheet" href="../CSS/work.css"> 
+    <link rel="stylesheet" href="../CSS/style.css">
+    <meta name="author" content="Paul Atoyebi">
+    <meta name="keywords" content="Paul Atoyebi, Tech wiz, full stack developer, graphic designer, ui/ux designer, interactive designer, portfolio, lagos designer, lagos developer">
+    <meta name="description" content="Paul Atoyebi is a Full Stack Developer based in Lagos, Nigeria.">    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="UTF-8">
+    <link id="app-fontawesome" rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" onload="this.rel = 'stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../IMG/pexels-steve-28551568.jpg" rel="shortcut icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Work| Paul Atoyebi</title>
+</head>
+<body>
+    <div class="black-swipe">
+
+    </div>
+    <header>
+        <nav class="nav">
+            
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26" color="black"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" id="svg"/></svg></a></li>
+                <li class="sidebar-list"><a href="./about.html">about</a></li>
+                <li class="sidebar-list" id="sidebar-list2"><a href="./work.html">works</a></li>
+                <li class="sidebar-list" id="sidebar-list3"><a href="./contact.html">contact</a></li>
+                <!-- <button onclick="toggleDarkMode()"><i class="fa fa-moon"></i></button> -->
+
+            </ul>
+            <div class="logo">
+                <a href="/index.html"><img src="../IMG/black.png" width="50px" loading="lazy"></a>
+            </div>
+            <ul>
+                <li class="hideOnMobile"><a href="./about.html">About</a></li>
+                <li class="hideOnMobile"><a href="./work.html">Works</a></li>
+                <li class="hideOnMobile"><a href="./contact.html">Contact</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+                <!-- <button onclick="toggleDarkMode()"><i class="fa fa-moon"></i></button> -->
+            </ul>
+            
+        </nav>
+    
+    </header>
+
+    <main>
+        <div class="work-main-page">
+            <div class="work-background">
+                <svg width="700" height="700" viewBox="0 0 800 800">
+                    <defs>
+                      
+                      <pattern id="wave" patternUnits="userSpaceOnUse" width="40" height="40">
+                        <path d="M 0 20 Q 10 0 20 20 T 40 20" stroke="#ccc" fill="transparent" stroke-width="2"/>
+                      </pattern>
+                  
+                      
+                      <mask id="donutMask">
+                        <rect width="800" height="800" fill="white" />
+                        <circle cx="400" cy="400" r="150" fill="black" />
+                      </mask>
+                    </defs>
+                  
+                    
+                    <circle cx="400" cy="400" r="300" fill="url(#wave)" mask="url(#donutMask)" />
+                  </svg>
+                  
+            </div>
+            <div class="work-page">
+                <h2 class="home-title">My Works.</h2>
+            </div>
+            <div class="work-arrow home-title">
+                <svg width="70" height="70" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 9L12 15L18 9" stroke="black" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  
+            </div>
+        </div>
+
+        <div class="projects">
+            <div class="projects_intro">
+                <!-- <h1>Crafted with Love</h1>
+                <div class="projects_intro_sub">
+                    These are the collection of my recent work
+                </div> -->
+               
+                <div class="projects_display">
+                    <!-- FIRST PROJECT -->
+                    <div class="images2">
+                        <img src="../IMG/e-commerce.jpg" alt="e-commerce" width="300px" height="300px">
+                    </div>
+                    <div class="projects_display_1 about-subtitle">
+                        <div class="projects_display_text_content">
+                            <div class="line_saga">
+                                <div class="line"></div>
+                                <span>01</span>
+                            </div>
+                            <h2>tune player</h2>
+                            <h3>UI/UX</h3>
+                        </div>
+                        <div class="projects_display_view_project">
+                            <a href="#">VIEW PROJECT&#8594;</a>
+                        </div>
+                        <div class="images">
+                            <img src="../IMG/e-commerce.jpg" alt="e-commerce" width="600px" height="400px">
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    <!-- SECOND PROJECT -->
+                    <div class="images2">
+                        <img src="../IMG/Screenshot (166).png" alt="My Portfolio" width="600px" height="400px">
+                    </div>
+                    <div class="projects_display_1 about-subtitle2">
+                        <div class="projects_display_text_content">
+                            <div class="line_saga">
+                                <div class="line"></div>
+                                <span>02</span>
+                            </div>
+                            <h2>movie browser</h2>
+                            <h3>WEB APP</h3>
+                        </div>
+                        <div class="projects_display_view_project">
+                            <a href="#">VIEW PROJECT&#8594;</a>
+                        </div>
+                        <div class="images">
+                        <img src="../IMG/Screenshot (166).png" alt="My Portfolio" width="600px" height="400px">
+                        </div>
+                    </div>
+                    <!--  THIRD PROJECT -->
+                    <div class="images2">
+                        <img src="../IMG/e-commerce.jpg" alt="e-commerce" width="300px" height="300px">
+                    </div>
+                    <div class="projects_display_1 about-subtitle3">
+                        <div class="projects_display_text_content">
+                            <div class="line_saga">
+                                <div class="line"></div>
+                                <span>03</span>
+                            </div>
+                            <h2>e-commerce</h2>
+                            <h3>WEB APP</h3>
+                        </div>
+                        <div class="projects_display_view_project">
+                            <a href="#">VIEW PROJECT&#8594;</a>
+                        </div>
+                        <div class="images">
+                            <img src="../IMG/e-commerce.jpg" alt="e-commerce" width="600px" height="400px">
+                        </div>
+                    </div>
+                    
+                </div>
+                 <div class="images2">
+                        <img src="../IMG/e-commerce.jpg" alt="e-commerce" width="300px" height="300px">
+                    </div>
+                    <div class="projects_display_1 about-subtitle3">
+                        <div class="projects_display_text_content">
+                            <div class="line_saga">
+                                <div class="line"></div>
+                                <span>03</span>
+                            </div>
+                            <h2>storybook website</h2>
+                            <h3>WEBSITE</h3>
+                        </div>
+                        <div class="projects_display_view_project">
+                            <a href="#">VIEW PROJECT&#8594;</a>
+                        </div>
+                        <div class="images">
+                            <img src="../IMG/e-commerce.jpg" alt="e-commerce" width="600px" height="400px">
+                        </div>
+                    </div>
+                    
+                </div>
+            <!-- <div class="projects_display_end">
+                <h6>THERE'S IS MORE</h6>
+                <span><a href="../HTML/work.html">view all projects&#8594;</span>
+            </div> -->
+        </div> 
+
+        <div class="works-github-projects">
+            <div class="github-head">
+                <h2 class="about-subtitle">Github Project</h2>
+            </div>
+            <div class="github-subhead home-social">
+                Here are some of my projects that I created during my spare time. I constantly keep on improving my skills by making these fun projects. These projects are available on my <a href="#">github repository</a>
+            </div>
+            
+            <div class="work-container">
+                
+                <div class="work-project-src">
+                    <ul>
+                        <li class="home-social"><span>02/</span> < src />&nbsp;<a href="#">E-commerce Site</a></li>
+                        <li class="home-social"><span>01/</span> < src />&nbsp;<a href="#">Portfolio Website</a></li>
+                        <li class="home-social"><span>03/</span> < src />&nbsp;<a href="#">Task Management App</a></li>
+                        
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        
+
+    
+    </main>
+
+
+
+    <footer class="footer">
+        <h1>Let's Work together.</h1>
+        <h2>I'm available for freelance work.</h2>
+        <div class="footer_say_hello">
+            <a href="#" id="projects">SAY HELLO &#8594</a>
+        </div>
+        
+        <div class="footer_icons">
+            <div class="block">
+                <ul>
+                    <div class="footer_copyright"><p>&copy; 2025 Paul Atoyebi</p></div>   
+                    <li><a href="https://www.instagram.com/Tech wiz_/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100086272523175" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/Tech wiz_" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://twitter.com/Tech wiz_" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></li>
+                    <li><a href="https://twitter.com/Tech wiz_" target="_blank" rel="noopener noreferrer"><i class="fa fa-behance"></i></a></li>
+                    <li><a href="https://twitter.com/Tech wiz_" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i></a></li>
+                </ul>
+                <div class="footer_copyright2"><p>&copy; 2025 Paul Atoyebi</p></div>  
+            </div> 
+        </div>
+
+        
+        
+        <div class="navigation_top">
+            <a href="../HTML/index.html">TOP</a><span  class= "arrow">&#8594;</span>
+        </div>
+    </footer>
+
+    <script>
+        function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+        }
+
+        function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+        }
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="../JS/main.js"></script>
+</body>
+</html>

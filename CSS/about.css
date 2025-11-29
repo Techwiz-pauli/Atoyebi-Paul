@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root{
+    --primary-color: black
+    --secondary-color: #F8F9FA;
+    --font-size:16px;
+    --font-family:"DM Sans", sans-serif;
+    --tertiary-color: #E6E6E9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    background:#F5F5F5;
+    color: var(--primary-color);
+    overflow-x: hidden;
+    line-height: 1.6;
+    transition: background-color 1s, color 0.3s;
+    font-family: "DM Sans", sans-serif;
+}
+.nav{
+    position: fixed;
+    width: 100%;
+}
+.nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 2rem;
+    transition: 0.3s;
+    float: right;
+    width: 30%;
+}
+.logo{
+    float: left;
+    width: 70%;
+    padding: 2rem 2rem;
+
+}
+.nav ul li{
+    list-style-type: none;
+    transition: 0.3s;
+
+}
+.nav ul li:hover{
+    color:black;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: #9999A1;
+    list-style-type: none;
+    font-weight: 500;
+    
+}
+/* about */
+main{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.about_content_intro{
+    padding: 250px 200px 200px 200px;
+    
+}
+.about_content_intro{
+    font-size: 40px;
+    font-weight:200;
+}
+.about_content_img{
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 0;
+    right: 0;
+    margin-top: 250px;
+    margin-right: 200px;
+}
+img{
+    object-fit: contain;
+}
+.about_introduction{
+    display: flex;
+    padding-top: 10px;
+}
+.about_introduction_left{
+    width: 40%;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 10px;    
+    color: black;
+}
+.about_introduction_right{
+    width: 60%;
+    font-size: 18px;
+    line-height: 40px;
+    color: #86838A;
+}
+.about_introduction_right h2{
+    color: black;
+}
+.about_introduction p{
+    padding-top: 50px;
+    padding-right: 150px;
+}
+.about_introduction_animation{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    background-color: black;
+    padding: 150px 0px 150px 0px;
+    font-size: 3rem;
+    font-family: "DM Sans", sans-serif;
+    line-height: 30px;
+    
+} 
+.animation span{
+    color: black; /* This is your main text color */
+    text-shadow: 
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px  1px 0 white,
+        1px  1px 0 white;
+        font-style: italic;
+        font-weight: 400;
+    animation: animate 2s ease-in-out infinite ;
+}
+@keyframes animate {
+    0% {
+      transform: translateX(1000px);
+      
+    }
+    100% {
+      transform: translateX(box-sizing);
+      
+    }
+  }
+  
+.motion1{
+    margin-bottom: 30px;
+}
+.motion2{
+    margin-bottom: 30px;
+}
+.motion3{
+    margin-bottom: 30px;
+}
+.skills-container{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 70px;
+
+}
+.skills-column{
+    margin: 50px;
+}
+.skills-column ul li{
+    list-style-type: none;
+    color: #86838A;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 13px;
+}
+.about_icons ul{
+    display: flex;
+    
+}
+.about_icons ul li{
+    list-style-type: none;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.about_icons ul li:first-child{
+    margin-left: 0px;
+}
+.about_icons ul li a{
+    text-decoration: underline;
+    color: black;
+    
+}
+.about_introduction_right{
+    font-size: 17px;
+}
+
+.about_mail a{
+    text-decoration: underline;
+    color: black;
+    font-size: 13px;
+    font-weight: 400;
+}
+#email{
+    padding-top: 50px;
+    font-size: 13px;
+}
+#social{
+    font-size: 13px;
+}
+.about_quote h1{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 100px;
+    margin-bottom: 100pxc;
+}
+.about_quote_author{
+    text-align: center;
+}
+
+
+@media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+      
+    }
+    .menu-button{
+      display: block;
+    }
+    
+    .about_content_img{
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 0;
+    right: 0;
+    margin-top: 150px;
+    margin-right: 200px;
+}
+   
+}
+@media (max-width:500px){
+    .about_content_intro{
+        padding: 150px 20px 20px 20px;
+        
+    }
+    .about_content_intro{
+        font-size: 30px;
+        font-weight:200;
+    }
+    .about_content_img{
+        display: block;
+        margin-top: 20px;   
+        position: relative;
+        padding: 0px 20px 0px 20px;
+
+    }
+    .about_content_img img{
+        position: relative;
+        display: block;
+        top: 200px;
+        /* height: 500px;
+        width: 300px; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+    }
+    
+    .about_introduction{
+        display: block;
+        padding-top: 50px;
+        width: 100%;
+        
+    }
+    .about_introduction_left{
+        width: 100%;
+        letter-spacing: 2px;
+        font-size: 0.6rem;    
+        color: black;
+        text-align: left;
+        padding: 0px 20px 0px 20px;
+    }
+    .about_introduction_right{
+        width: 100%;
+        font-size: 1rem;
+        line-height: 30px;
+        color: #86838A;
+        padding: 0px 20px 0px 20px;
+        text-align: justify;
+    }
+    .about_introduction_right h2{
+        color: black;
+        text-align: left;
+        padding-top: 20px;
+    }
+    .about_introduction p{
+        padding-top: 40px;
+        padding-right: 20px;
+    }
+    .about_introduction_animation{
+        display: block; 
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        background-color: black;
+        padding: 50px 20px 50px 20px;
+        font-size: 2rem;
+        font-family: "DM Sans", sans-serif;
+        line-height: 30px;
+        
+    } 
+    .about_quote h1{
+        text-align: center;
+        font-size: 1rem;
+        margin-top: 50px;
+        margin-bottom: 100pxc;
+    }
+    .skills-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    
+    }
+    .skills-column{
+        margin: 10px 0px 10px 10px;
+    }
+    .skills-column ul li{
+        list-style-type: none;
+        color: #86838A;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-size: 13px;
+    }
+    
+    
+  
+}
+
+
+/* From Uiverse.io by Na3ar-17 */ 
+.container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -250px;
+    margin-left: -800px;
+  }
+  
+  .label {
+    background-color: transparent;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    width: 180px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    padding: 5px;
+    position: relative;
+  }
+  
+  .label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    width: 8px;
+    height: 8px;
+    transition: all 0.4s ease;
+    border-radius: 100%;
+    margin: auto;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .label .input {
+    display: none;
+  }
+  
+  .label .title {
+    font-size: 17px;
+    color: black;
+    transition: all 0.4s ease;
+    position: absolute;
+    right: 18px;
+    bottom: 14px;
+    text-align: center;
+  }
+  
+  .label .title:last-child {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .label .circle {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+    position: relative;
+    box-shadow: 0 0 0 0 rgb(255, 255, 255);
+    overflow: hidden;
+  }
+  
+  .label .circle .icon {
+    color: #fff;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+  }
+  
+  .label .circle .square {
+    aspect-ratio: 1;
+    width: 15px;
+    border-radius: 2px;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+  }
+  
+  .label .circle::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #3333a8;
+    width: 100%;
+    height: 0;
+    transition: all 0.4s ease;
+  }
+  
+  .label:has(.input:checked) {
+    width: 57px;
+    animation: installed 0.4s ease 3.5s forwards;
+  }
+  
+  .label:has(.input:checked)::before {
+    animation: rotate 3s ease-in-out 0.4s forwards;
+  }
+  
+  .label .input:checked + .circle {
+    animation:
+      pulse 1s forwards,
+      circleDelete 0.2s ease 3.5s forwards;
+    rotate: 180deg;
+  }
+  
+  .label .input:checked + .circle::before {
+    animation: installing 3s ease-in-out forwards;
+  }
+  
+  .label .input:checked + .circle .icon {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .label .input:checked ~ .circle .square {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .label .input:checked ~ .title {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .label .input:checked ~ .title:last-child {
+    animation: showInstalledMessage 0.4s ease 3.5s forwards;
+  }
+  
+  @keyframes pulse {
+    0% {
+      scale: 0.95;
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    70% {
+      scale: 1;
+      box-shadow: 0 0 0 16px rgba(255, 255, 255, 0);
+    }
+    100% {
+      scale: 0.95;
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+  }
+  
+  @keyframes installing {
+    from {
+      height: 0;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(-90deg) translate(27px) rotate(0);
+      opacity: 1;
+      visibility: visible;
+    }
+    99% {
+      transform: rotate(270deg) translate(27px) rotate(270deg);
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  @keyframes installed {
+    100% {
+      width: 150px;
+      border-color: black;
+    }
+  }
+  
+  @keyframes circleDelete {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  @keyframes showInstalledMessage {
+    100% {
+      opacity: 1;
+      visibility: visible;
+      right: 56px;
+    }
+  }
+  

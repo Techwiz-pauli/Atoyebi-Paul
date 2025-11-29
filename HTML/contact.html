@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../CSS/contact.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <meta name="author" content="Paul Atoyebi">
+    <meta name="keywords" content="Paul Atoyebi, Tech wiz, full stack developer, graphic designer, ui/ux designer, interactive designer, portfolio, lagos designer, lagos developer">
+    <meta name="description" content="Paul Atoyebi is a Full Stack Developer based in Lagos, Nigeria.">    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="app-fontawesome" rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" onload="this.rel = 'stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../IMG/pexels-steve-28551568.jpg" rel="shortcut icon" type="image/x-icon">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Contact|Paul Atoyebi</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26" color="black"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" id="svg"/></svg></a></li>
+                <li class="sidebar-list"><a href="../HTML/about.html">about</a></li>
+                <li class="sidebar-list" id="sidebar-list2"><a href="../CSS/work.css">works</a></li>
+                <li class="sidebar-list" id="sidebar-list3"><a href="../HTML/contact.html">contact</a></li>
+                <!-- <button onclick="toggleDarkMode()"><i class="fa fa-moon"></i></button> -->
+
+            </ul>
+            <div class="logo">
+                <a href="/index.html"><img src="../IMG/black.png" width="50px" loading="lazy"></a>
+            </div>
+            <ul>
+                <li class="hideOnMobile"><a href="../HTML/about.html">About</a></li>
+                <li class="hideOnMobile"><a href="../HTML/work.html">Works</a></li>
+                <li class="hideOnMobile"><a href="./contact.html">Contact</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+                <!-- <button onclick="toggleDarkMode()"><i class="fa fa-moon"></i></button> -->
+            </ul>
+            
+        </nav>
+    
+    </header>
+    </header>
+    <main>
+        <div class="contact_page">
+            <div class="contact_heading">
+                <h1 class="home-title">Get in touch.</h1>
+            </div>
+            <div class="contact_subheading">
+                Do you fancy saying hi to me or you want to get started with your project and you need my help? Feel to contact me.
+            </div>
+            <form action="#">
+                <div class="contact_form">
+                    <div class="contact_form_name">
+                        <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="contact_form_email">
+                        <input type="email" name="email" id="email" placeholder="Email" Tell me why you are contacting me. required>
+                    </div>
+                    <div class="contact_form_email">
+                        <input type="text" name="text" id="name" placeholder="Subject" required>
+                    </div>
+                    <div class="contact_form_message">
+                        <textarea name="message" id="message" cols="100" rows="10" placeholder="Message"></textarea>
+                    </div>
+                </div>
+                <button type="submit" id="but"><a href="#">SEND MESSAGE</a><i class="fas fa-paper-plane"></i></button>
+
+            </form>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <h1>Let's Work together.</h1>
+        <h2>I'm available for freelance work.</h2>
+        <div class="footer_say_hello">
+            <a href="#" id="projects">SAY HELLO &#8594</a>
+        </div>
+        
+        <div class="footer_icons">
+            <div class="block">
+                <ul>
+                    <div class="footer_copyright"><p>&copy; 2025 Paul Atoyebi</p></div>   
+                    <li><a href="https://www.instagram.com/Tech wiz_/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100086272523175" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/Tech wiz_" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://twitter.com/Tech wiz_" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></li>
+                    <li><a href="https://twitter.com/Tech wiz_" target="_blank" rel="noopener noreferrer"><i class="fa fa-behance"></i></a></li>
+                    <li><a href="https://twitter.com/Tech wiz_" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i></a></li>
+                </ul>
+                <div class="footer_copyright2"><p>&copy; 2025 Paul Atoyebi</p></div>  
+            </div> 
+        </div>
+
+        
+        
+        <div class="navigation_top">
+            <a href="../HTML/index.html">TOP</a><span  class= "arrow">&#8594;</span>
+        </div>
+    </footer>
+
+    <script>
+        function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+        }
+
+        function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+        }
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="../JS/main.js"></script>
+</body>
+</html>

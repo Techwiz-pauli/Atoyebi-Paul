@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- SEO AND RESPONSIVENESS -->
+    <link rel="stylesheet" href="../CSS/project.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>    
+    <link rel="stylesheet" href="../CSS/style.css">
+    <meta name="author" content="Paul Atoyebi">
+    <meta name="keywords" content="Paul Atoyebi, Tech wiz, full stack developer, graphic designer, ui/ux designer, interactive designer, portfolio, lagos designer, lagos developer">
+    <meta name="description" content="Paul Atoyebi is a Full Stack Developer based in Lagos, Nigeria.">    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="app-fontawesome" rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" onload="this.rel = 'stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../IMG/pexels-steve-28551568.jpg" rel="shortcut icon" type="image/x-icon">
+    <title>Paul Atoyebi: Movie Project</title>
+
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26" color="black"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" id="svg"/></svg></a></li>
+                <li class="sidebar-list"><a href="./about.html">about</a></li>
+                <li class="sidebar-list" id="sidebar-list2"><a href="./about.html">works</a></li>
+                <li class="sidebar-list" id="sidebar-list3"><a href="./contact.html">contact</a></li>
+                <!-- <button onclick="toggleDarkMode()"><i class="fa fa-moon"></i></button> -->
+
+            </ul>
+            <div class="logo">
+                <a href="/index.html"><img src="../IMG/web developer in lagos title logo.avif" width="50px" loading="lazy"></a>
+            </div>
+            <ul>
+                <li class="hideOnMobile"><a href="./about.html">About</a></li>
+                <li class="hideOnMobile"><a href="./work.html">Works</a></li>
+                <li class="hideOnMobile"><a href="./contact.html">Contact</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+                <!-- <button onclick="toggleDarkMode()"><i class="fa fa-moon"></i></button> -->
+            </ul>
+            
+        </nav>
+    
+    </header>
+
+    <main>
+        <section>
+            <div class="project-landing-page">
+                
+            </div>
+        </section>
+        <section></section>
+        <section></section>
+    </main>    
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <h1>Let's Work together.</h1>
+        <h2>I'm available for freelance work.</h2>
+        <div class="footer_say_hello">
+            <a href="#" id="projects">SAY HELLO &#8594</a>
+        </div>
+        
+        <div class="footer_icons">
+            <div class="block">
+                <ul>
+                    <div class="footer_copyright"><p>&copy; 2025 Paul Atoyebi</p></div>   
+                    <li><a href="https://www.instagram.com/Tech wiz_/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100086272523175" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/Tech wiz_" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://twitter.com/Tech wiz_" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></li>
+                    <li><a href="https://twitter.com/Tech wiz_" target="_blank" rel="noopener noreferrer"><i class="fa fa-behance"></i></a></li>
+                    <li><a href="https://twitter.com/Tech wiz_" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i></a></li>
+                </ul>
+                <div class="footer_copyright2"><p>&copy; 2025 Paul Atoyebi</p></div>  
+            </div> 
+        </div>
+
+        
+        
+        <div class="navigation_top">
+            <a href="./index.html">TOP</a><span  class= "arrow">&#8594;</span>
+        </div>
+    </footer>
+
+    <script>
+        // Check local storage on page load
+        if (localStorage.getItem("darkMode") === "enabled") {
+            document.body.classList.add("dark-mode");
+        }
+
+        // Function to toggle dark mode and store preference in localStorage
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+
+            // Save the mode in localStorage
+            if (document.body.classList.contains("dark-mode")) {
+                localStorage.setItem("darkMode", "enabled");
+            } else {
+                localStorage.setItem("darkMode", "disabled");
+            }
+        }
+
+        // Automatically enable dark mode if it's 7 PM or later
+        const currentTime = new Date();
+        const currentHour = currentTime.getHours();
+
+        if (currentHour >= 19) {  // 7 PM or later
+            document.body.classList.add("dark-mode");
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const swipe = document.querySelector('.black-swipe');
+            const body = document.body;
+
+            // Slide the black overlay in, then slide it out
+            swipe.classList.add('active');
+
+            setTimeout(() => {
+                swipe.classList.remove('active');
+                body.classList.add('loaded'); // show the main content
+            }, 1200); // wait for the swipe to finish
+        });
+
+        function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+        }
+
+        function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+        }
+       
+    </script>
+
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load",function(){
+            loader.style.display = "none";
+        })
+    </script>
+
+</body>
+</html>
