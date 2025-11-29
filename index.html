@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- SEO AND RESPONSIVENESS -->
+     <meta name="description" content="Official portfolio of Atoyebi Paul, a passionate web developer and AI enthusiast. Explore projects, skills, and contact info.">
+    <meta name="keywords" content="Atoyebi Paul, Tech wiz, web developer, portfolio, Nigeria, HTML, CSS, React">
+    <meta name="author" content="Atoyebi Paul">
+    <meta name="google-site-verification" content="xVlha27Jr7-YsDsWGxzzu3jq3c-BXe_cX2ee-mRxm34"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>    
+    <link rel="stylesheet" href="./src/CSS/style.css">
+    <meta name="author" content="Paul Atoyebi">
+    <meta name="keywords" content="Paul Atoyebi, Tech wiz, full stack developer, graphic designer, ui/ux designer, interactive designer, portfolio, lagos designer, lagos developer">
+    <meta name="description" content="Paul Atoyebi is a Full Stack Developer based in Lagos, Nigeria.">    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="app-fontawesome" rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" onload="this.rel = 'stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="./src/IMG/white.png" rel="shortcut icon" type="image/x-icon">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="./src/CSS/chat.css">   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+
+    <title>Paul Atoyebi Portfolio Website: Web Developer</title>
+</head>
+<body>
+    
+    
+
+
+    <div id="preloader"></div>
+
+    <header>
+        <nav class="nav">
+            
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26" color="black"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" id="svg"/></svg></a></li>
+                <li class="sidebar-list"><a href="./src/HTML/about.html">about</a></li>
+                <li class="sidebar-list" id="sidebar-list2"><a href="./src/HTML/work.html">project</a></li>
+                <li class="sidebar-list" id="sidebar-list3"><a href="./src/HTML/contact.html">contact</a></li>
+                <li class="sidebar-list" id="sidebar-list3"><a href="./src/HTML/storywebsite.html">Story Web</a></li>
+
+                <!-- <li class="sidebar-list" id="sidebar-list3"><a href="./src/HTML/contact.html">resume</a></li> -->
+                
+
+            </ul>
+            <div class="logo">
+                Tech wiz
+            </div>
+            <ul>
+                <li class="hideOnMobile show"><a href="./src/HTML/about.html" id="home">Home</a></li>
+                <li class="hideOnMobile"><a href="./src/HTML/contact.html">About</a></li>
+                <li class="hideOnMobile"><a href="./src/HTML/contact.html">Project</a></li>
+                <li class="hideOnMobile"><a href="./src/HTML/contact.html">Skills</a></li>
+                <li class="hideOnMobile"><a href="./src/HTML/work.html">Contact</a></li>
+                <!-- <li class="hideOnMobile"><a href="./src/HTML/contact.html">Resume</a></li> -->
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+                
+                <!-- <button onclick="toggleDarkMode()"><i class="fa fa-moon"></i></button> -->
+            </ul>
+            
+        </nav>
+    
+    </header>
+
+
+   <!-- Floating button -->
+    <div class="chatbot-container">
+        <div class="chatbot-window">
+            <div class="chatbot-header">
+                <h3><i class = "fas fa-robot"></i> &nbsp;Chat with Tech wiz</h3>
+                <button class="chatbot-close">×</button>
+            </div>
+            <div class="chatbot-messages" id="chat-messages">
+                <!-- Messages will be added here dynamically -->
+            </div>
+            <div class="suggestion-chips" id="suggestion-chips">
+                <div class="chip" data-message="Tell me about yourself">About Me</div>
+                <div class="chip" data-message="Show me your projects">Portfolio</div>
+                <div class="chip" data-message="How can I contact you?">Contact</div>
+                <div class="chip" data-message="Tell me a joke">Fun Fact</div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button id="send-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="chatbot-toggle">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 10H8.01M12 10H12.01M16 10H16.01M9 16H5C3.89543 16 3 15.1046 3 14V6C3 4.89543 3.89543 4 5 4H19C20.1046 4 21 4.89543 21 6V14C21 15.1046 20.1046 16 19 16H14L9 21V16Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
+    <!-- end of chatbot -->
+
+
+    <main>
+        <div class="landing_page" id="scroll">
+            <div class="landing_page_intro">
+                <!-- <img src="./src/IMG/Tech wiz2.png" width="300px" height="300px" loading="lazy" id="profile"> -->
+                <h1 class="home-title">Creative Designer<br>& Developer</h1>
+                <!-- <h2 class="home-title" id="size">Full Stack Developer </h2> -->
+                <h2 class="home-title" id="scroll">Hi I'm Paul Atoyebi, a passionate Full Stack <br>Developer & UI/UX Designer based in the Lagos,Nigeria.
+                <div class="view-work" id="scroll">
+                    <div class="click"><a href="#works">View My Work&nbsp&nbsp<i class="fas fa-arrow-down"></i></a></div>
+                    <div class="click2"><a href="#">Get In Touch</a></div><br>
+                     
+                </div>     
+                <div class="icons"> 
+                        <ul>
+                            <li><a href="#"><i class="fab fa-github"></i></a></li>
+                            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="mailto:atoyebiPaul5@gmail.com"><i class="fas fa-envelope"></i></a></li>
+                            <li><a href="https://wa.me/2347077669928"><i class="fab fa-whatsapp"></i></a></li>
+                            
+                        </ul>
+                </div>            
+            </div>
+            
+        </div>
+        <!-- END OF LANDING PAGE SECTION -->
+        <div class="about-me" id="scroll">
+            <h1 id="scroll">About Me</h1>
+            <p>
+                I'm a passionate developer with 3+ years of experience building scalable web applications. I love <br>turning complex problems into simple, beautiful, and intuitive solutions. When I'm not coding, <br>you'll find me exploring new technologies, contributing to open source, or enjoying a good <br>coffee.
+            </p>
+            <div class="column">
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h2>Frontend Development</h2>
+                    <div class="language">
+                        React, TypeScript, Next.js, Tailwind CSS
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-rocket"></i>
+                         
+                    </div>
+                    <h2>Story website</h2>
+                    <div class="language">
+                        True Life Stories, Life and Lesson.
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-palette"></i>        
+                    </div>
+                    <h2>UI/UX Design</h2>
+                    <div class="language">
+                        Figma, Adobe Creative Suite, Prototyping
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon">
+                       <i class="fas fa-user"></i>
+
+                    </div>
+                    <h2>Team Collaboration</h2>
+                    <div class="language">
+                        Agile methodologies, Git, Code reviews
+                    </div>
+                </div>
+
+            </div>
+
+        <div class="stats">
+        <div class="stat-item">
+            <span class="count" data-target="50">0</span>+
+            <p>Projects Completed</p>
+        </div>
+        <div class="stat-item">
+            <span class="count" data-target="3">0</span>+
+            <p>Years Experience</p>
+        </div>
+        <div class="stat-item">
+            <span class="count" data-target="20">0</span>+
+            <p>Happy Clients</p>
+        </div>
+        </div>
+
+
+
+
+        <div class="projects" id="works">
+            <div class="projects_intro">
+                <h1 class="home-title">Featured Projects</h1>
+                <div class="projects_intro_sub" id="view">
+                    There are some of my recent projects that showcase my skills and passion for <br>development.
+                </div>
+                <div class="project_section">
+                    <div class="first_project">
+                        <div class="head one">Project Preview</div>
+                        <div class="text">
+                            <h2>E-commerce Platform</h2>
+                            <p>Interactive weather dashboard with location-based forecasts, beautiful data visualizations, and offline support.</p>
+                            <div class="tech_stack">
+                                <li>React</li>
+                                <li>NodeJS</li>
+                                <li>PostgreSQL</li>
+                                <li>Stripe</li>
+                            </div>
+                            <div class="live_demo">
+                                <div class="demo">
+                                    <a href="#"><i class="fas fa-share"></i>Live Demo</a>
+                                </div>
+                                <div class="code">
+                                    <a href="#"><i class="fab fa-github">&nbsp</i>Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="first_project">
+                        <div class="head two">Project Preview</div>
+                        <div class="text">
+                            <h2>Task Management App</h2>
+                            <p>Collaborative task management application with real-time updates, drag-and-drop functionality, and team workspaces.</p>
+                            <div class="tech_stack">
+                                <li>React</li>
+                                <li>NodeJS</li>
+                                <li>PostgreSQL</li>
+                                <li>Stripe</li>
+                            </div>
+                            <div class="live_demo">
+                                <div class="demo">
+                                    <a href="#"><i class="fas fa-share"></i>Live Demo</a>
+                                </div>
+                                <div class="code">
+                                    <a href="#"><i class="fab fa-github">&nbsp</i>Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+
+                <div class="project_section">
+                    <div class="first_project">
+                        <div class="head three">Project Preview</div>
+                        <div class="text">
+                            <h2>Weather Dashboard</h2>
+                            <p>Interactive weather dashboard with location-based forecasts, beautiful data visualizations, and offline support.</p>
+                            <div class="tech_stack">
+                                <li>React</li>
+                                <li>NodeJS</li>
+                                <li>PostgreSQL</li>
+                                <li>Stripe</li>
+                            </div>
+                            <div class="live_demo">
+                                <div class="demo">
+                                    <a href="#"><i class="fas fa-share"></i>Live Demo</a>
+                                </div>
+                                <div class="code">
+                                    <a href="#"><i class="fab fa-github">&nbsp</i>Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="first_project">
+                        <div class="head four">Project Preview</div>
+                        <div class="text">
+                            <h2>Portfolio Website</h2>
+                            <p>This very website! Built with React, TypeScript, and Tailwind CSS. Features smooth animations and responsive design.</p>
+                            <div class="tech_stack">
+                                <li>React</li>
+                                <li>NodeJS</li>
+                                <li>PostgreSQL</li>
+                                <li>Stripe</li>
+                            </div>
+                            <div class="live_demo">
+                                <div class="demo">
+                                    <a href="#"><i class="fas fa-share"></i>Live Demo</a>
+                                </div>
+                                <div class="code">
+                                    <a href="#"><i class="fab fa-github">&nbsp</i>Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>                  
+        </div> 
+    </main>
+
+    <!-- Contact Section -->
+    <section class="contact-section1" id="contact1">
+    <div class="container1">
+        <h2 class="title">Let's Work Together</h2>
+        <p class="subtitle">
+        Have a project in mind? I'd love to hear about it. Let's create something amazing <br>together.
+        </p>
+
+        <div class="contact-grid1">
+        <!-- Contact Info -->
+        <div class="contact-info1">
+            <h2>Get In Touch</h2>
+            <p>
+            Whether you're looking to build a new website, improve an existing one, 
+            or just want to chat about technology, I'm always open to discussing new opportunities.
+            </p>
+            <ul>
+            <li><i class="fas fa-envelope"></i> atoyebipaul5@gmail.com</li>
+            <li><i class="fas fa-phone"></i> +2347077669928</li>
+            <li><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</li>
+            </ul>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form1" action="https://formspree.io/f/movngwov" method="POST">
+        <div class="form-group1">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="your@email.com" required />
+        </div>
+        <input type="text" name="subject" placeholder="Subject" required />
+        <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+        <button type="submit"><i class = "fas fa-paper-plane"></i>Send Message</button>
+        </form>
+
+
+
+        </div>
+    </div>
+    </section>
+
+    <footer>
+        © Paul Atoyebi 2025. Built with HTML, CSS & JS
+    </footer>
+
+<!-- FontAwesome for icons -->
+    
+
+
+    <!-- chatbot script  -->
+    <script src="./src/api/chat.js" defer></script>
+    <script src="./src/JS/chat.js" defer></script>
+    <script src="./src/JS/contact.js" defer></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Check local storage on page load
+        if (localStorage.getItem("darkMode") === "enabled") {
+            document.body.classList.add("dark-mode");
+        }
+
+        // Function to toggle dark mode and store preference in localStorage
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+
+            // Save the mode in localStorage
+            if (document.body.classList.contains("dark-mode")) {
+                localStorage.setItem("darkMode", "enabled");
+            } else {
+                localStorage.setItem("darkMode", "disabled");
+            }
+        }
+
+        // Automatically enable dark mode if it's 7 PM or later
+        // const currentTime = new Date();
+        // const currentHour = currentTime.getHours();
+
+        // if (currentHour >= 19) {  // 7 PM or later
+        //     document.body.classList.add("dark-mode");
+        // }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const swipe = document.querySelector('.black-swipe');
+            const body = document.body;
+
+            // Slide the black overlay in, then slide it out
+            swipe.classList.add('active');
+
+            setTimeout(() => {
+                swipe.classList.remove('active');
+                body.classList.add('loaded'); // show the main content
+            }, 1200); // wait for the swipe to finish
+        });
+
+        function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+        }
+
+        function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+        }
+       
+    </script>
+
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load",function(){
+            loader.style.display = "none";
+        })
+    </script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./src/JS/main.js"></script>
+    
+
+    <script>
+    const counters = document.querySelectorAll('.count');
+     const speed = 200; // adjust speed
+
+    const animateCount = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const increment = Math.ceil(target / speed);
+
+    if (count < target) {
+      counter.innerText = count + increment;
+      setTimeout(() => animateCount(counter), 30);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  // Use IntersectionObserver so it only runs when visible
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        observer.unobserve(entry.target); // run once
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => {
+    observer.observe(counter);
+  });
+</script>
+
+
+ <script>
+        // DOM Elements
+        const chatbotToggle = document.querySelector('.chatbot-toggle');
+        const chatbotWindow = document.querySelector('.chatbot-window');
+        const chatbotClose = document.querySelector('.chatbot-close');
+        const chatMessages = document.getElementById('chat-messages');
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+        const suggestionChips = document.getElementById('suggestion-chips');
+        
+        // Chatbot state
+        let isChatOpen = false;
+        let contactFormActive = false;
+        
+        // Portfolio data - Update this with your actual information
+        const portfolioData = {
+            projects: [
+                {
+                    id: 1,
+                    title: "E-commerce Platform",
+                    description: "A full-stack e-commerce solution with payment integration and admin dashboard.",
+                    technologies: ["React", "Node.js", "MongoDB"],
+                    screenshot: "https://via.placeholder.com/300x200/627BFF/FFFFFF?text=E-commerce+Project",
+                    link: "#"
+                },
+                {
+                    id: 2,
+                    title: "AI Image Recognition",
+                    description: "Machine learning application that identifies objects in images with high accuracy.",
+                    technologies: ["Python", "TensorFlow", "OpenCV"],
+                    screenshot: "https://via.placeholder.com/300x200/D46CFF/FFFFFF?text=AI+Project",
+                    link: "#"
+                },
+                {
+                    id: 3,
+                    title: "Mobile Fitness App",
+                    description: "Cross-platform fitness tracking application with social features.",
+                    technologies: ["React Native", "Firebase", "Redux"],
+                    screenshot: "https://via.placeholder.com/300x200/627BFF/FFFFFF?text=Fitness+App",
+                    link: "#"
+                }
+            ]
+        };
+        
+        // Smart links - Update these with your actual links
+        const smartLinks = {
+            cv: "https://example.com/Tech wiz-cv.pdf",
+            github: "https://github.com/Atoyebi2000",
+            linkedin: "https://linkedin.com/in/Tech wiz",
+            email: "mailto:atoyebiPaul5@gmail.com"
+        };
+        
+        // Easter eggs
+        const easterEggs = {
+            jokes: [
+                "Why do programmers prefer dark mode? Because light attracts bugs!",
+                "How many programmers does it take to change a light bulb? None, that's a hardware problem!",
+                "Why do Java developers wear glasses? Because they can't C#!"
+            ],
+            quotes: [
+                "The only way to do great work is to love what you do. - Steve Jobs",
+                "Innovation distinguishes between a leader and a follower. - Steve Jobs",
+                "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt"
+            ],
+            trivia: [
+                "Tech wiz once coded for 36 hours straight to meet a deadline!",
+                "Tech wiz's first programming language was Python.",
+                "Tech wiz believes the best code is code that never has to be written."
+            ]
+        };
+        
+        // Toggle chatbot visibility
+        chatbotToggle.addEventListener('click', () => {
+            isChatOpen = !isChatOpen;
+            chatbotWindow.classList.toggle('active', isChatOpen);
+            
+            if (isChatOpen) {
+                // Show welcome message if it's the first time opening
+                if (chatMessages.children.length === 0) {
+                    addMessage("Hi, I'm Tech wiz's assistant, here to guide you! How can I help you today?", 'bot');
+                }
+            }
+        });
+        
+        // Close chatbot
+        chatbotClose.addEventListener('click', () => {
+            isChatOpen = false;
+            chatbotWindow.classList.remove('active');
+        });
+        
+        // Send message on button click
+        sendBtn.addEventListener('click', sendMessage);
+        
+        // Send message on Enter key
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+        
+        // Suggestion chips
+        suggestionChips.addEventListener('click', (e) => {
+            if (e.target.classList.contains('chip')) {
+                const message = e.target.getAttribute('data-message');
+                userInput.value = message;
+                sendMessage();
+            }
+        });
+        
+        // Function to send a message
+        function sendMessage() {
+            const message = userInput.value.trim();
+            if (message === '') return;
+            
+            // Add user message to chat
+            addMessage(message, 'user');
+            userInput.value = '';
+            
+            // Show typing indicator
+            showTypingIndicator();
+            
+            // Process the message after a short delay
+            setTimeout(() => {
+                processMessage(message);
+            }, 1000);
+        }
+        
+        // Function to add a message to the chat
+        function addMessage(text, sender) {
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message');
+            messageElement.classList.add(sender === 'user' ? 'user-message' : 'bot-message');
+            messageElement.textContent = text;
+            
+            chatMessages.appendChild(messageElement);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            
+            // Remove typing indicator if it exists
+            removeTypingIndicator();
+        }
+        
+        // Function to show typing indicator
+        function showTypingIndicator() {
+            const typingElement = document.createElement('div');
+            typingElement.classList.add('typing-indicator');
+            typingElement.id = 'typing-indicator';
+            typingElement.innerHTML = `
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            `;
+            
+            chatMessages.appendChild(typingElement);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        // Function to remove typing indicator
+        function removeTypingIndicator() {
+            const typingIndicator = document.getElementById('typing-indicator');
+            if (typingIndicator) {
+                typingIndicator.remove();
+            }
+        }
+        
+        // Function to process user messages
+        function processMessage(message) {
+            const lowerMessage = message.toLowerCase();
+            
+            // Handle specific commands
+            if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
+                addMessage("Hello! How can I assist you today?", 'bot');
+            }
+            else if (lowerMessage.includes('about') || lowerMessage.includes('who are you')) {
+                showAboutInfo();
+            }
+            else if (lowerMessage.includes('portfolio') || lowerMessage.includes('project')) {
+                showPortfolio();
+            }
+            else if (lowerMessage.includes('contact') || lowerMessage.includes('email') || lowerMessage.includes('get in touch')) {
+                showContactForm();
+            }
+            else if (lowerMessage.includes('resume') || lowerMessage.includes('cv')) {
+                addMessage(`You can download my resume here: ${smartLinks.cv}`, 'bot');
+            }
+            else if (lowerMessage.includes('github')) {
+                addMessage(`Here's my GitHub profile: ${smartLinks.github}`, 'bot');
+            }
+            else if (lowerMessage.includes('linkedin')) {
+                addMessage(`Here's my LinkedIn profile: ${smartLinks.linkedin}`, 'bot');
+            }
+            else if (lowerMessage.includes('joke') || lowerMessage.includes('funny')) {
+                const randomJoke = easterEggs.jokes[Math.floor(Math.random() * easterEggs.jokes.length)];
+                addMessage(randomJoke, 'bot');
+            }
+            else if (lowerMessage.includes('quote') || lowerMessage.includes('motivation')) {
+                const randomQuote = easterEggs.quotes[Math.floor(Math.random() * easterEggs.quotes.length)];
+                addMessage(randomQuote, 'bot');
+            }
+            else if (lowerMessage.includes('trivia') || lowerMessage.includes('fact')) {
+                const randomTrivia = easterEggs.trivia[Math.floor(Math.random() * easterEggs.trivia.length)];
+                addMessage(randomTrivia, 'bot');
+            }
+            else if (lowerMessage.includes('best project') || lowerMessage.includes('recommend')) {
+                recommendProject(lowerMessage);
+            }
+            else {
+                // Use AI for general conversation
+                getAIResponse(message);
+            }
+        }
+        
+        // Function to show about information
+        function showAboutInfo() {
+            const aboutText = "I'm Tech wiz, a passionate full-stack developer with expertise in modern web technologies. I specialize in creating responsive, user-friendly applications with clean code and intuitive design. My journey in tech started 5 years ago, and I've been constantly learning and growing ever since!";
+            addMessage(aboutText, 'bot');
+            
+            setTimeout(() => {
+                addMessage("My skills include: JavaScript, React, Node.js, Python, and much more. I'm always excited to take on new challenges and learn new technologies!", 'bot');
+            }, 500);
+        }
+        
+        // Function to show portfolio
+        function showPortfolio() {
+            addMessage("Here are some of my recent projects:", 'bot');
+            
+            portfolioData.projects.forEach(project => {
+                setTimeout(() => {
+                    const projectHTML = `
+                        <div class="project-card">
+                            <img src="${project.screenshot}" alt="${project.title}">
+                            <h4>${project.title}</h4>
+                            <p>${project.description}</p>
+                            <p><strong>Technologies:</strong> ${project.technologies.join(', ')}</p>
+                        </div>
+                    `;
+                    
+                    const messageElement = document.createElement('div');
+                    messageElement.classList.add('message', 'bot-message');
+                    messageElement.innerHTML = projectHTML;
+                    
+                    chatMessages.appendChild(messageElement);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 500);
+            });
+        }
+        
+        // Function to show contact form
+        function showContactForm() {
+            addMessage("I'd love to hear from you! Please fill out this form and I'll get back to you soon.", 'bot');
+            
+            setTimeout(() => {
+                const contactFormHTML = `
+                    <div class="contact-form">
+                        <input type="text" id="contact-name" placeholder="Your Name">
+                        <input type="email" id="contact-email" placeholder="Your Email">
+                        <textarea id="contact-message" placeholder="Your Message" rows="3"></textarea>
+                        <button id="contact-submit">Send Message</button>
+                    </div>
+                `;
+                
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('message', 'bot-message');
+                messageElement.innerHTML = contactFormHTML;
+                
+                chatMessages.appendChild(messageElement);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                
+                // Add event listener to the submit button
+                document.getElementById('contact-submit').addEventListener('click', submitContactForm);
+                
+                contactFormActive = true;
+            }, 500);
+        }
+        
+        // Function to submit contact form
+        function submitContactForm() {
+            const name = document.getElementById('contact-name').value;
+            const email = document.getElementById('contact-email').value;
+            const message = document.getElementById('contact-message').value;
+            
+            if (!name || !email || !message) {
+                addMessage("Please fill in all fields before submitting.", 'bot');
+                return;
+            }
+            
+            // In a real implementation, you would send this data to Formspree or your backend
+            // For now, we'll just show a success message
+            addMessage(`Thank you, ${name}! Your message has been sent successfully. I'll get back to you at ${email} soon.`, 'bot');
+            
+            contactFormActive = false;
+        }
+        
+        // Function to recommend a project based on user interest
+        function recommendProject(message) {
+            let recommendedProject;
+            
+            if (message.includes('e-commerce') || message.includes('shopping') || message.includes('store')) {
+                recommendedProject = portfolioData.projects[0];
+            } else if (message.includes('ai') || message.includes('machine learning') || message.includes('ml')) {
+                recommendedProject = portfolioData.projects[1];
+            } else if (message.includes('mobile') || message.includes('fitness') || message.includes('health')) {
+                recommendedProject = portfolioData.projects[2];
+            } else {
+                // Default recommendation
+                recommendedProject = portfolioData.projects[0];
+            }
+            
+            addMessage(`Based on your interest, I'd recommend checking out my "${recommendedProject.title}" project.`, 'bot');
+            
+            setTimeout(() => {
+                const projectHTML = `
+                    <div class="project-card">
+                        <img src="${recommendedProject.screenshot}" alt="${recommendedProject.title}">
+                        <h4>${recommendedProject.title}</h4>
+                        <p>${recommendedProject.description}</p>
+                        <p><strong>Technologies:</strong> ${recommendedProject.technologies.join(', ')}</p>
+                    </div>
+                `;
+                
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('message', 'bot-message');
+                messageElement.innerHTML = projectHTML;
+                
+                chatMessages.appendChild(messageElement);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 500);
+        }
+        
+        // Function to get AI response (placeholder - you'll need to implement with your API key)
+        function getAIResponse(message) {
+            // This is a placeholder for the AI integration
+            // In a real implementation, you would call the OpenAI API here
+            
+            // For demo purposes, we'll use some predefined responses
+            const responses = [
+                "That's an interesting question! As Tech wiz's assistant, I'm here to help you learn more about his work and skills.",
+                "I'm not sure I understand. Could you rephrase that? Or maybe ask me about Tech wiz's projects or background?",
+                "I specialize in information about Tech wiz's portfolio and experience. Is there something specific you'd like to know?",
+                "Thanks for your message! I'm here to help you connect with Tech wiz and learn about his work."
+            ];
+            
+            const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+            addMessage(randomResponse, 'bot');
+            
+            // Uncomment and implement with your actual API key:
+            
+            fetch('https://api.openai.com/v1/chat/completions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer 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'
+                },
+                body: JSON.stringify({
+                    model: 'gpt-3.5-turbo',
+                    messages: [
+                        {
+                            role: 'system',
+                            content: 'You are a helpful assistant representing Tech wiz, a skilled developer. Keep responses professional but friendly.'
+                        },
+                        {
+                            role: 'user',
+                            content: message
+                        }
+                    ]
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const aiMessage = data.choices[0].message.content;
+                addMessage(aiMessage, 'bot');
+            })
+            .catch(error => {
+                console.error('Error calling AI API:', error);
+                addMessage("I'm having trouble connecting right now. Please try again later.", 'bot');
+            });
+            
+        }
+    </script>
+
+    <script src = "./src/JS/chat.js"></script>
+
+
+
+
+
+</body>
+</html>
